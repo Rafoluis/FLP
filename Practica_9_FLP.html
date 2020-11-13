@@ -1,0 +1,72 @@
+<html>
+<body>
+<script>
+
+function Fibonacci(val){
+    var cont=0;
+    var cont2=1;
+    var cont3=2;
+    var sum;
+    if(val>2){
+        while(cont3<val){
+            sum=cont+cont2;
+            cont=cont2;
+            cont2=sum;
+            cont3+=1;
+        }
+        return cont2;
+    }
+    else if(val==2){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+console . log (Fibonacci(10));
+
+function Factores(num) {
+    var fac = 0;
+    for (var i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            fac += '-' + i;
+        }
+    }
+    console.log(fac);
+}
+
+Factores(96);
+
+function Primos(val){
+    for(var i=2;i<val;i++){
+        if(val % i==0){
+            return console.log("No es primo");
+        }
+        return console.log("Es primo");
+    }
+}
+Primos(3);
+
+function FactorialItera(val){
+    var sum = 1;
+    while(val>1){
+        sum*= val;
+        val--;
+    }
+    return console.log(sum);
+}
+
+FactorialItera(5);
+
+function FactorialRecu(val){
+    if(val==0){
+        return 1;
+    }
+    else{
+        return FactorialRecu(val-1)*val;
+    }
+}
+
+console.log(FactorialRecu(5));
+
+</script> </body> </html>
