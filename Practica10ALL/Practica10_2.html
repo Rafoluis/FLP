@@ -1,0 +1,15 @@
+<html ><body >
+    <script src ="ramda.min.js" > </script>
+    <script>
+    function square(x){return (x*x);}
+    function double(x){return (x*2);}
+    
+    var f3 = R.compose(square,double);
+    var f4 = R.compose(double,square,);
+    console . log ("f3(5): ",f3(5));
+    console . log ("f4(5): ",f4(5));
+    console .log ("f3 (10) :",f3(10));
+    console .log ("f4 (10) :",f4(10));
+    
+</script>
+</body > </html >

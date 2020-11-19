@@ -1,0 +1,16 @@
+<html ><body >
+    <script>
+    function isEven ( num ) { return ( num %2 == 0) ; }
+    function find ( arr , f ){
+        var finarr=[];
+        for(let i=0;i<arr.length;i++){
+            if(f(arr[i])==1){
+                finarr.push(arr[i]);
+            }
+        }
+        return finarr;
+    }
+    result = find ([1 , 3, 5, 4, 2],isEven);
+    console .log (" find result :", result ); // [4 , 2]
+</script>
+</body > </html >
