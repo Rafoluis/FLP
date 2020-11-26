@@ -1,0 +1,64 @@
+<html>
+<body>
+<script>
+var personnel = [
+{
+id: 5 ,
+name : " Luke Skywalker ",
+pilotingScore : 98 ,
+shootingScore : 56 ,
+isForceUser : true ,
+},
+{
+id: 82 ,
+name : " Sabine Wren ",
+pilotingScore : 73 ,
+shootingScore : 99 ,
+
+isForceUser : false ,
+},
+{
+id: 22 ,
+name : "Zeb Orellios ",
+pilotingScore : 20 ,
+shootingScore : 59 ,
+isForceUser : false ,
+},
+{
+id: 15 ,
+name : " Ezra Bridger ",
+pilotingScore : 43 ,
+shootingScore : 67 ,
+isForceUser : true ,
+},
+{
+id: 11 ,
+name : " Caleb Dume ",
+pilotingScore : 71 ,
+shootingScore : 85 ,
+isForceUser : true ,
+}
+];
+
+
+//forma funcional
+
+const total = personnel 
+  .filter (v => v.isForceUser) 
+  .map (name => name.pilotingScore + name.shootingScore) 
+  .reduce ((accumulator, sum) => accumulator + sum, 0);
+
+console.log(total);
+
+//forma iterativa 
+var s =0;
+for(var i in personnel){
+    if(personnel[i].isForceUser){
+        var c = (personnel[i].pilotingScore);
+        var v = (personnel[i].shootingScore);
+        s = s + c + v;
+    }
+}
+console.log(s)
+
+</script> </body> </html>
