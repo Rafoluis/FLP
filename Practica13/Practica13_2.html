@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+
+//Curruing
+function curry(x) {
+        return function (y) {
+            return x + y;
+        }
+    }
+
+console.log(curry (5)(5))
+
+
+//Partial Application
+function partial(x, y) {
+   return x + y;
+}
+const ejem = partial.bind(null, 5)
+console.log(ejem(10)) 
+
+</script> </body> </html>

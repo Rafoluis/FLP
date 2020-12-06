@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+
+
+//funcion normal
+function volumen(l, w, h) {
+    return l * w * h;
+}
+
+//funcion curry
+function curryvolumen(length) {
+    return function(width) {
+        return function(height) {
+            return height * width * length;
+        }
+    }
+}
+
+console.log(volumen(2, 3, 4)); 
+console.log(curryvolumen(2)(3)(4)); 
+
+</script> </body> </html>

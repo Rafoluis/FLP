@@ -1,0 +1,44 @@
+<html>
+<body>
+<script>
+
+/*
+function joinWords(val){
+    var tex = "";
+    tex += val;
+    if (val=='There'){
+        return function(val1){
+        tex += val1
+
+        return  function (val2){
+            tex += val2
+
+            return function (val3){
+                tex += val3
+                return tex;
+            }
+        }
+        }
+    }
+    else{
+        return tex;
+    }
+
+console .log (joinWords ('Hello')); // Hello
+console .log (joinWords ('There')('is')('no')('spoon .'));
+ // There is no spoon .
+
+
+}*/
+
+function joinWords(val) {
+    return text => text === undefined ? val : joinWords(val.concat(text));
+};
+
+
+result = joinWords('Hello')();
+console.log(result); // Hello
+result = joinWords('There ')('is ')('no ')('spoon .')();
+console.log (result); // There is no spoon .
+
+</script> </body> </html>
