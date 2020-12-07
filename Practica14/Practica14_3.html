@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+
+function memorization(val) {
+  var arrayval = {};
+  var a = Array.prototype.slice;
+
+  return function() {
+    var cont = a.call(arguments);
+    if (cont in arrayval){ return arrayval[cont]; }
+    else{
+        return (arrayval[cont] = val.apply(this, cont));
+    }
+  }
+}
+
+function recufibonacci(n) {
+  if (n <= 1) return 1;
+  return recufibonacci(n - 1) + recufibonacci(n - 2);
+}
+
+recufibonacci = memorization(recufibonacci);
+
+console.log(recufibonacci(10));
+</script> </body> </html>

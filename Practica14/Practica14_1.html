@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+
+function facto(val2,nums=[1]) {
+    if (!nums[val2]){
+      nums[val2] = val2 * facto(val2 - 1);
+    }
+
+    return nums[val2]
+}
+function numeuler(val,cont=0){
+	if(val<0.0001){ return (val); }
+    val=1/facto(cont);  
+    cont=cont+1;
+
+	return val+numeuler(val,cont);
+};
+console.log(numeuler());
+
+</script> </body> </html>

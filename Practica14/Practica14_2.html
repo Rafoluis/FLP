@@ -1,0 +1,49 @@
+<html>
+<body>
+<script>
+
+function facto(val2,nums=[1]) {
+    if (!nums[val2]){
+      nums[val2] = val2 * facto(val2 - 1);
+    }
+
+    return nums[val2]
+}
+
+function seno(a,b=1,val1,cont=0){
+	if(b>100){return (val1);}		
+	if (cont%2===0){
+		val1=Math.pow(a,b)/facto(b);	
+		val1=val1*+1;
+	}
+	else{
+		val1=Math.pow(a,b)/facto(b);
+		val1=val1*-1;
+    }
+    cont=cont+1
+    b=b+2
+	
+	return val1+seno(a,b,val1,cont);
+
+}
+function coseno(a,b=0,val1,cont=0){
+	if(b>100){return (val1);}		
+	if (cont%2===0){
+		val1=Math.pow(a,b)/facto(b);	
+		val1=val1*+1;
+	}
+	else{
+		val1=Math.pow(a,b)/facto(b);
+		val1=val1*-1;
+    }
+    cont=cont+1
+    b=b+2
+	
+	return val1+coseno(a,b,val1,cont);
+
+}
+
+console.log(seno(15));
+console.log(coseno(15));
+
+</script> </body> </html>
